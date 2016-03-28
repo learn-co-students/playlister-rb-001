@@ -1,3 +1,4 @@
+require 'pry'
 describe "Genre" do
 
   it "can initialize a genre" do
