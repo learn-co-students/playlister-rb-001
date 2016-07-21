@@ -26,6 +26,7 @@ describe "Genre" do
     2.times do
       artist = Artist.new
       song = Song.new.tap { |s| s.genre = genre }
+      # binding.pry
       artist.add_song(song)
     end
 
@@ -46,7 +47,7 @@ describe "Genre" do
 
   describe "Class methods" do
 
-    it "can reset all genres that have been created" do 
+    it "can reset all genres that have been created" do
       Genre.new
       Genre.reset_genres
       expect(Genre.all).to be_empty
