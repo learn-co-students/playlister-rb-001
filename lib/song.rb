@@ -1,11 +1,10 @@
 class Song
 
-  attr_reader :genre
-  attr_accessor :name, :artist
+  attr_accessor :name, :artist, :genre
 
   def genre=(genre)
     #why doesn't self work here
-    self.genre = genre
+    @genre = genre
     genre.songs << self
   end
 
